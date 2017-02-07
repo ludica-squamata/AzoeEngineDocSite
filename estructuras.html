@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Estructuras 3D</title>
+    <meta name="author" content="Zeniel Danaku & Einacio Spiegel">
+    <meta name="keywords" content="Game,Python,Pygame,Mano's Gifts,Ázoe Engine,RPG,Role playing videogame">
+    <link rel=stylesheet href=screen.css    type=text/css media=screen />
+    <link rel=stylesheet href=handheld.css  type=text/css media=handheld />
+    <link rel="shortcut icon" href=favicon.png>
+    </head>
+</head>
+<body>
+    <nav>
+        <iframe src="navigation.html" width="208 px" height="268 px">Esta página utliza marcos.</iframe>
+    </nav>
+    <article>
+        <h1 class="h">Formato de Estructuras 3D</h1>
+        <section>
+            <p>Se denominan Estructuras 3D a los objetos que se componen de más de un objeto, y que pueden ser vistos desde distintas cámaras (efecto 3D). Por ejemplo, una Estructura3D "casa" puede estar armada por el sprite de la casa propiamente dicha, un sprite separado para la puerta (que puede ser **Operable**) y un sprite para la ventana, que podría, por ejemplo, emitir luz. Las Estructuras 3D tienen caras para los componentes: "frente" son los objetos que se verán cuando la camara mire a la estructura de frente (la perspectiva por defecto). Los objetos del "lado" se veran cuando la estructura sea vista de lado; y finalmente "reverso" refiere a los objetos que se verán cuando la camara vea la parte trasera de la estructura. Estos componentes no tienen porqué ser los mismos en cada lado. Una Casa puede tener una puerta al frente, pero no necesariamente atrás o por el costado.</p>
+
+            <p>Cada componente listado debe estar dentro de las "referencias". Aquí se indican, mediante strings, rutas a achivos de imagen png (para componentes que son solo eso, una imagen sin interacción); rutas a la definición de un objeto (que puede ser una estructura 3D como ésta o algún tipo de Prop, por ejemplo un **Operable**) o una _definición embebida_ de un objeto (que sería lo mismo que encontraríamos en el archivo json de la definición de un objeto).</p>
+
+            <p>Finalmente, la propiedad "cara" puede estar o no presente. Su presencia indica que la estructura es final (es decir, es la que vemos). De no estar, el renderer no sabe con qué cara mostrar al objeto, por lo que este tipo de estructuras "sin cara" no pueden ser vistas directamente. Un ejemplo de estructura3D sin cara son los palotes.</p>
+            <pre><code>
+    {
+      "tipo":"estructura3D",
+      "nombre":"&lt;nombre&gt;",
+      "componentes":{
+        "frente":{
+          "&lt;componente&gt;":[[&lt;x&gt;,&lt;y&gt;,&lt;z&gt;]],
+          ...
+        },
+        "lado":{
+            "&lt;componente&gt;":[[&lt;x&gt;,&lt;y&gt;,&lt;z&gt;]],
+            ...
+        },
+        "reverso":{
+            "&lt;componente&gt;":[[&lt;x&gt;,&lt;y&gt;,&lt;z&gt;]],
+            ...
+        }
+      },
+      "referencias":{
+        "&lt;componente1&gt;":"&lt;ruta a un archivo png&gt;",
+        "&lt;componente2&gt;":"&lt;ruta a la defición de un objeto&gt;",
+        "&lt;componente3&gt;":"&lt;definición embebida de un objeto&gt;",
+        }
+      },
+      "proyecta_sombra":true|false,
+
+      "cara":"frente"|"lado"|"reverso"
+    }
+            </code></pre>
+        </section>
+    </article>
+</body>
+</html>

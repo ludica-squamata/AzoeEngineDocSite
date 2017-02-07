@@ -1,0 +1,48 @@
+body {
+    background-color: #557799;
+}
+
+iframe {
+    border:none;
+    margin-top:4px;
+}
+
+article {
+    width: 75%;
+    margin-left: 240px;
+    position:absolute;
+    top: 0px
+}
+section {
+    background-color: #ffcc44;
+}
+
+h1 {
+    
+}
+
+.h {
+    background-color: #ffff00;
+    color: black;
+}
+
+.links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #3388aa;
+}
+
+.block {
+    display: block;    
+    padding: 8px 16px;
+}
+
+.block:hover {
+    background-color: #cccc44;
+}
+
+.b {
+    text-decoration: none;
+    color: black;
+}

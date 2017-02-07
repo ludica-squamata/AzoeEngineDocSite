@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Props</title>
+    <meta name="author" content="Zeniel Danaku & Einacio Spiegel">
+    <meta name="keywords" content="Game,Python,Pygame,Mano's Gifts,Ázoe Engine,RPG,Role playing videogame">
+    <link rel=stylesheet href=screen.css    type=text/css media=screen />
+    <link rel=stylesheet href=handheld.css  type=text/css media=handheld />
+    <link rel="shortcut icon" href=favicon.png>
+</head>
+<body>
+    <nav>
+        <iframe src="navigation.html" width="208 px" height="268 px">Esta página utliza marcos.</iframe>
+    </nav>
+    
+    <article>
+    <h1 class="h">Formato de Props e Ítems</h1>
+        <section>
+            <h2 class="h">Escenografía</h2>
+            <p> Se denomina escenografía a los objetos que están presentes en el mapa, como las casas o los árboles. Un objeto escenografía puede ser de los siguientes tipos.</p>
+            <ul>
+                <li> Agarrable: se pueden tomar del mapa y pasan a ser Ítems en el Inventario.</li>
+                <li> Movible: es posible hacer que se muevan, empujándolos.</li>
+                <li> Destruible: WIP</li>
+                <li> Operable: tienen diversos estados que pueden cambiarse al accionarlos.</li>
+            </ul>
+        </section>
+        <section>
+            <h2 class="h">Item</h2>
+            <p> Los objetos agarrables se convierten en Item cuando son tomados del mapa y pasan a formar parte del invetario de un mob. Pueden ser de los siguientes tipos.</p>
+            <ul>
+                <li>Equipable: por ejemplo, una parte de armadura.</li>
+                <li>Consumible: por ejmplo, una fruta.</li>
+            </ul>
+        </section>
+        <section>
+            <p>La estructura general para las escenografías es:</p>
+            <pre><code>
+        {
+          "tipo":"&lt;string&gt;",
+          "subtipo":"&lt;string&gt;" (si tiene),
+          "peso":int, "volumen":int,
+          "image": "props/&lt;filename&gt;.png",
+          "proyecta_sombra":true|false
+          "propiedades":[]
+        }
+            </code></pre>
+        </section>
+        <section>
+            <h3 class="h">Consumible</h3>
+            Una escenografía _Agarrable_ puede ser también consumible:
+            <pre><code>
+        "subtipo":"consumible",
+        "efecto":{
+          "des":"&lt;string, descripción&gt;",
+          "stat":"&lt;string&gt;",
+          "mod":int}
+            </code></pre>
+            O bien Equipable:
+            <pre><code>
+        "subtipo":"equipable",
+        "efecto":{
+            "des":"&lt;string, descripción&gt;",
+            "equipo":"&lt;slot>"}
+            </code></pre>
+        </section>
+        <section>
+            <h3 class="h">Operable</h3>
+            <p>Un tipo particular de Escenografía es aquella que puede ser operada por un mob, pero que no puede pasar a formar parte del inventario de éste. Por ejemplo, una puerta.</p>
+            <pre><code>
+            "operable":[
+              {"ID":0,
+               "image":"props/&lt;filename&gt;.png",
+               "solido":true,
+               "next":1
+              },
+              {"ID":1,
+                 "image":"props/&lt;filename&gt;.png",
+                 "solido":false,
+                 "next":0
+                }]
+            </code></pre>
+        </section>
+        <section>
+            <h3 class="h">Eventos</h3>
+            <p>Finalmente, un objeto de la escenografía puede tener eventos asociados.</p>
+            <pre><code>
+            "script":"&lt;string. Nombre del script.py&gt;",
+            "eventos":{
+                "&lt;nombre del evento>":"&lt;nombre de la función&gt;"
+            </code></pre>
+        </section>
+    </article>
+</body>
+</html>
