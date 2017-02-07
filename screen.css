@@ -13,13 +13,14 @@ section {
     background-color: #ffcc44;
 }
 
-h1 {
-    
+p {
+    padding:5px;
 }
 
 .h {
     background-color: #ffff00;
     color: black;
+    padding:5px;
 }
 
 .links {
