@@ -2,17 +2,13 @@ body {
     background-color: #557799;
 }
 
-iframe {
-    border:none;
-    margin-top:4px;
-}
-
 article {
     width: 75%;
     margin-left: 240px;
     position:absolute;
     top: 0px
 }
+
 section {
     background-color: #ffcc44;
 }
@@ -45,4 +41,11 @@ h1 {
 .b {
     text-decoration: none;
     color: black;
+}
+
+.nav {
+    border:none;
+    margin-top:4px;
+    width:208px;
+    height:268px;
 }
