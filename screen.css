@@ -17,6 +17,10 @@ p {
     padding:5px;
 }
 
+li {
+    padding:5px
+}
+
 h1, h2, h3 {
     background-color: #ffff00;
     color: black;
@@ -48,5 +52,5 @@ h1, h2, h3 {
     border:none;
     margin-top:4px;
     width:208px;
-    height:268px;
+    height:400px;
 }

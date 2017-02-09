@@ -1,45 +1,44 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <title>Instrucciones para probar el Engine</title>
-    <meta charset="UTF-8">
-    <meta name="author" content="Zeniel Danaku & Einacio Spiegel">
-    <meta name="keywords" content="Game,Python,Pygame,Mano's Gifts,Ázoe Engine,RPG,Role playing videogame">
-    <link rel=stylesheet href=screen.css type=text/css media=screen />
-    <link rel=stylesheet href=handheld.css type=text/css media=handheld />
-    <link rel="shortcut icon" href=favicon.png>
-</head>
-<body>
-    <nav><iframe class="nav" src="navigation.html">Esta página utliza marcos.</iframe></nav>
-    <article>    
-        <h1>Instrucciones para probar el Engine</h1>
-        <section>
-            <p>Para hacer una prueba del engine como está hecho hasta ahora, deberás seguir los siguientes pasos:</p>
-            <ol>
-                <li>Descarga <a target =_blank href="https://www.python.org/downloads/release/python-344/">Python 3.4.4</a>.
-                Recuerda bajar la versión correcta para tu sistema operativo (32 o 64 bits)</li>
-                <li>Instala Python 3.4.4</li>
-                <li>Descarga el build especial de <a target=_blank href="http://www.lfd.uci.edu/~gohlke/pythonlibs/#pygame">Pygame 1.9.2a0 para Python 3.4</a>
-                <ul>
-                    <li>Si tu sistema es de 32bit, deberás bajar el build pygame-1.9.2a0-cp34-none-win32.whl</li>
-                    <li> Si tu sistema es de 64bit, deberás bajar el build pygame-1.9.2a0-cp34-none-win_amd64.whl</li>
-                </ul></li>
-                <li>
-                    <p>Notarás que el instalador de pygame es un archivo whl. Windows no reconoce este tipo de achivos por defecto, por lo que no puedes instalarlo con solo un doble click.</p>
-                    <p>Para instalar pygame, sigue estos pasos</p>
-                    <ol>
-                        <li>Abre el "Simbolo de Sistema" (CMD) como Administrador</li>
-                        <li>Usando el comando cd, ve hacia la ruta donde esté el archivo whl</li>
-                        <li>Introduce el siguiente comando:
-                            <p>pip install some-package.whl</p>
-                            <p>(some-package.whl es el archivo whl de pygame, asegúrate de escribir correctamente el nombre del arhivo)</p>
-                        </li>
-                    </ol>
-                </li>
-                <li>Una vez que tengas python y pygame instalado, puedes bajar el <a href="https://github.com/ludica-squamata/mano-gift/archive/master.zip">zip del engine</a>.</li>
-                <li>Ahora solo queda abrir el archivo main.py que se encuentra donde hayas descomprimido el arhivo.</li>
-            </ol>
-        </section>
-    </article>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Instrucciones para probar el Engine</title>
+        <meta name="author" content="Zeniel Danaku & Einacio Spiegel">
+        <meta name="keywords" content="Game,Python,Pygame,Mano's Gifts,Ázoe Engine,RPG,Role playing videogame">
+        <link rel="stylesheet" href="screen.css">
+        <link rel="shortcut icon" href="favicon.png">
+    </head>
+    <body>
+        <nav><iframe class="nav" src="navigation.html">Esta página utliza marcos.</iframe></nav>
+        <article>
+            <h1>Instrucciones para probar el Engine</h1>
+            <section>
+                <p>Para hacer una prueba del engine como está hecho hasta ahora, deberás seguir los siguientes pasos:</p>
+                <ol>
+                    <li>Descarga <a target =_blank href="https://www.python.org/downloads/release/python-344/">Python 3.4.4</a>.
+                    Recuerda bajar la versión correcta para tu sistema operativo (32 o 64 bits)</li>
+                    <li>Instala Python 3.4.4</li>
+                    <li>Descarga el build especial de <a target=_blank href="http://www.lfd.uci.edu/~gohlke/pythonlibs/#pygame">Pygame 1.9.2a0 para Python 3.4</a>
+                    <ul>
+                        <li>Si tu sistema es de 32bit, deberás bajar el build pygame-1.9.2a0-cp34-none-win32.whl</li>
+                        <li> Si tu sistema es de 64bit, deberás bajar el build pygame-1.9.2a0-cp34-none-win_amd64.whl</li>
+                    </ul></li>
+                    <li>
+                        <p>Notarás que el instalador de pygame es un archivo whl. Windows no reconoce este tipo de achivos por defecto, por lo que no puedes instalarlo con solo un doble click.</p>
+                        <p>Para instalar pygame, sigue estos pasos</p>
+                        <ol>
+                            <li>Abre el "Simbolo de Sistema" (CMD) como Administrador</li>
+                            <li>Usando el comando cd, ve hacia la ruta donde esté el archivo whl</li>
+                            <li>Introduce el siguiente comando:
+                                <p>pip install some-package.whl</p>
+                                <p>(some-package.whl es el archivo whl de pygame, asegúrate de escribir correctamente el nombre del arhivo)</p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>Una vez que tengas python y pygame instalado, puedes bajar el <a href="https://github.com/ludica-squamata/mano-gift/archive/master.zip">zip del engine</a>.</li>
+                    <li>Ahora solo queda abrir el archivo main.py que se encuentra donde hayas descomprimido el arhivo.</li>
+                </ol>
+            </section>
+        </article>
+    </body>
 </html>
