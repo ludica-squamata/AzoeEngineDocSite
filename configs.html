@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Configuraciones del Engine</title>
+        <meta name="author" content="Zeniel Danaku & Einacio Spiegel">
+        <meta name="keywords" content="Game,Python,Pygame,Mano's Gifts,Ázoe Engine,RPG,Role playing videogame">
+        <link rel="stylesheet" href="screen.css">
+        <link rel="icon" href="favicon.png">
+    </head>
+    <body>
+        <nav><iframe class="nav" src="navigation.html">Esta página utliza marcos.</iframe></nav>
+        <article>
+            <h1>Configuraciones del Engine</h1>
+            <section>
+                <p>El Ázoe Engine posiblita la configuración de ciertos elementos a través de una carpeta especial
+                llamada <code>script/</code> que debe encontrarse dentro de la carpeta del mod.</p>
+            </section>
+            <section>
+                <h3>Custom QuickCircularMenu</h3>
+                <p>Hay que especificar un key en mod.json de nombre "cicularmenu" que sea una lista de
+                    diccionarios. Cada diccionario debe tener dos claves: "name" y "icon". Los valores
+                    de ambos son como strings. Además, hay que crear un módulo "circularmenu" en
+                    mod/scripts, y asignarle a las funciones (comandos) o listas (cascadas) un nombre
+                    que se encuentre en la lista de mod.json. Si esta clave existe, los métodos custom
+                    se utilizan en lugar de los de base.</p>
+            </section>
+            <section>
+                <h3>Métodos arbitrarios en ModData</h3>
+                <p>ModData ahora puede cargar una cantidad arbitraria de métodos, por ejemplo
+                    <code>intro()</code>. Todos los que figuren en data/scripts/, cuyo nombre coincida con
+                        la función que contienen (<code>intro.py == intro()</code>; <code>reloj.py
+                            != on_hora()</code>), se añaden como métodos de ModData</p>
+            </section>
+        </article>
+</body>
+</html>
