@@ -1,5 +1,6 @@
 body {
     background-color: #557799;
+    font-family: verdana
 }
 
 article {
@@ -25,6 +26,15 @@ h1, h2, h3 {
     background-color: #ffff00;
     color: black;
     padding:5px;
+}
+
+dt {
+    display:inline-block;
+    font-weight:bold;
+}
+
+dd {
+    display:block;
 }
 
 .links {

@@ -41,22 +41,22 @@ EventDispatcher.trigger("&lt;nombre del evento&gt;", "&lt;clase de origen&gt;", 
             </section>
             <section>
                 <p>Los eventos que actualmente están en el engine son:
-                <ul>
-                    <li>NuevoJuego: se dispara cuando se inicia un juego.</li>
-                    <li>CambiarMapa: cuando héroe cambia de mapas, este evento le avisa al engine que cambie el mapa.</li>
-                    <li>hora: cada vez que el reloj llegue a una hora, se dispara este evento. Está vinculado al movimiento solar.</li>
-                    <li>MovimientoSolar: cambia las sombras de los sprites.</li>
-                    <li>DialogEvent: cuando un fragmento de diálogo lance un evento, será de este tipo.</li>
-                    <li>MobHerido: se dispara cuando un mob resulta herido. Actualiza el HUD si el mob es el héroe.</li>
-                    <li>MobMuerto: se dispara cuando un mob muere. Esto cierra el juego si el mob es el héroe.</li>
-                    <li>DelItem: cuando el héroe agarra un item del mapa, éste evento se lanza para hacerlo desaparecer del mapa.</li>
-                    <li>button_activated: este evento está vinculado a las EventFlags.</li>
-                    <li>Pause: se activa cuando el juego entra en pausa. detiene el correr del tiempo.</li>
-                    <li>key: cada vez que el jugador toca una tecla, se dispara este evento. Cada evento tendrá un efecto diferente dependiendo del modo de juego en el que se encuentre el motor, la tecla pulsada, y el modo en el que se haya pulsado (tap, hold o release).</li>
-                    <li>OpenMenu: cuando Pausa u otro menú llaman a nuevos menúes se dispara este evento para abrirlos.</li>
-                    <li>ToggleSetKey: cuando el usuario elija una tecla para modificar el input, se dispara este evento para capturar el keydown de una tecla no registrada.</li>
-                    <li>Save, SaveData y SaveDataFile: estos tres eventos se disparan en cascada. El primero avisa a todas las clases oyentes que se va a guardar el estado del juego. Cada clase, a su vez, lanza SaveData con los datos que se quieren guardar (posicion del personaje, hora, etc). Finalmente, SaveFileData le indica al engine que tiene que guardar la data en el archivo de salvado.</li>
-                </ul>
+                <dl>
+                    <dt>NuevoJuego</dt>: <dd>se dispara cuando se inicia un juego.</dd>
+                    <dt>CambiarMapa</dt>: <dd>cuando héroe cambia de mapas, este evento le avisa al engine que cambie el mapa.</dd>
+                    <dt>hora</dt>: <dd>cada vez que el reloj llegue a una hora, se dispara este evento. Está vinculado al movimiento solar.</dd>
+                    <dt>MovimientoSolar</dt>: <dd>cambia las sombras de los sprites.</dd>
+                    <dt>DialogEvent</dt>: <dd>cuando un fragmento de diálogo lance un evento, será de este tipo.</dd>
+                    <dt>MobHerido</dt>: <dd>se dispara cuando un mob resulta herido. Actualiza el HUD si el mob es el héroe.</dd>
+                    <dt>MobMuerto</dt>: <dd>se dispara cuando un mob muere. Esto cierra el juego si el mob es el héroe.</dd>
+                    <dt>DelItem</dt>: <dd>cuando el héroe agarra un item del mapa, éste evento se lanza para hacerlo desaparecer del mapa.</dd>
+                    <dt>button_activated</dt>: <dd>este evento está vinculado a las EventFlags.</dd>
+                    <dt>Pause</dt>: <dd>se activa cuando el juego entra en pausa. detiene el correr del tiempo.</dd>
+                    <dt>key</dt>: <dd>cada vez que el jugador toca una tecla, se dispara este evento. Cada evento tendrá un efecto diferente dependiendo del modo de juego en el que se encuentre el motor, la tecla pulsada, y el modo en el que se haya pulsado (tap, hold o release).</dd>
+                    <dt>OpenMenu</dt>: <dd>cuando Pausa u otro menú llaman a nuevos menúes se dispara este evento para abrirlos.</dd>
+                    <dt>ToggleSetKey</dt>: <dd>cuando el usuario elija una tecla para modificar el input, se dispara este evento para capturar el keydown de una tecla no registrada.</dd>
+                    <dt>Save, SaveData y SaveDataFile</dt>: <dd>estos tres eventos se disparan en cascada. El primero avisa a todas las clases oyentes que se va a guardar el estado del juego. Cada clase, a su vez, lanza SaveData con los datos que se quieren guardar (posicion del personaje, hora, etc). Finalmente, SaveFileData le indica al engine que tiene que guardar la data en el archivo de salvado.</dd>
+                </dl>
 
             </section>
         </article>
