@@ -15,7 +15,9 @@
             <section>
                 <dl>
                     <dt>Escenografía</dt>
-                    <dd>Se denomina escenografía a los objetos que están presentes en el mapa, como las casas o los árboles. Un objeto escenografía puede ser de los siguientes tipos.</dd>
+                    <dd>Se denomina escenografía a los objetos que están presentes en el mapa,
+                        como las casas o los árboles. Un objeto escenografía puede ser de los
+                        siguientes tipos.</dd>
                 </dl>
                 <dl>
                     <dt>Agarrable</dt>: <dd>se pueden tomar del mapa y pasan a ser Ítems en el Inventario.</dd>
@@ -24,22 +26,20 @@
                 </dl>
                     <p>La estructura general para las escenografías es:</p>
                 <pre>
-                    <code>
-{
+<code>{
   "tipo":"&lt;string&gt;",
   "subtipo":"&lt;string&gt;" (si tiene),
   "peso":int, "volumen":int,
   "image": "props/&lt;filename&gt;.png",
   "proyecta_sombra":true|false
   "propiedades":[]
-}
-                    </code>
+}</code>
                 </pre>
             </section>
 
             <section>
                 <h3>Agarrable</h3>
-                <p> Los objetos agarrables se convierten en <span>Ítem</span> cuando son tomados del
+                <p> Los objetos agarrables se convierten en <em>Ítem</em> cuando son tomados del
                     mapa y pasan a formar parte del invetario de un mob. Los ítems pueden ser de los
                     siguientes tipos.</p>
                 <dl>
@@ -47,24 +47,20 @@
                     <dt>Equipable</dt>: <dd>por ejemplo, una parte de armadura.</dd>
                 </dl>
 
-                <p>Una escenografía Agarrable puede ser también <span>Consumible</span>:</p>
+                <p>Una escenografía Agarrable puede ser también <em>Consumible</em>:</p>
                 <pre>
-                    <code>
-"subtipo":"consumible",
+<code>"subtipo":"consumible",
 "efecto":{
   "des":"&lt;string, descripción&gt;",
   "stat":"&lt;string&gt;",
-  "mod":int}
-                    </code>
+  "mod":int}</code>
                 </pre>
-                <p>O bien <span>Equipable</span>:</p>
+                <p>O bien <em>Equipable</em>:</p>
                 <pre>
-                    <code>
-"subtipo":"equipable",
+<code>"subtipo":"equipable",
 "efecto":{
     "des":"&lt;string, descripción&gt;",
-    "equipo":"&lt;slot>"}
-                    </code>
+    "equipo":"&lt;slot>"}</code>
                 </pre>
             </section>
             <section>
@@ -72,8 +68,8 @@
                 <p>Un tipo particular de Escenografía es aquella que puede ser operada por un mob,
                     pero que no puede pasar a formar parte del inventario de éste.
                     Por ejemplo, una puerta.</p>
-                <pre><code>
-"operable":[
+                <pre>
+<code>"operable":[
   {"ID":0,
    "image":"props/&lt;filename&gt;.png",
    "solido":true,
@@ -83,18 +79,16 @@
      "image":"props/&lt;filename&gt;.png",
      "solido":false,
      "next":0
-    }]
-                </code></pre>
+    }]</code>
+                </pre>
             </section>
             <section>
                 <h2>Eventos</h2>
                 <p>Finalmente, un objeto de la escenografía puede tener eventos asociados.</p>
                 <pre>
-                    <code>
-"script":"&lt;string. Nombre del script.py&gt;",
+<code>"script":"&lt;string. Nombre del script.py&gt;",
 "eventos":{
-    "&lt;nombre del evento>":"&lt;nombre de la función&gt;"
-                    </code>
+    "&lt;nombre del evento>":"&lt;nombre de la función&gt;"</code>
                 </pre>
             </section>
         </article>

@@ -19,8 +19,8 @@
                 <p>Cada componente listado debe estar dentro de las "referencias". Aquí se indican, mediante strings, rutas a achivos de imagen png (para componentes que son solo eso, una imagen sin interacción); rutas a la definición de un objeto (que puede ser una estructura 3D como ésta o algún tipo de Prop, por ejemplo un **Operable**) o una _definición embebida_ de un objeto (que sería lo mismo que encontraríamos en el archivo json de la definición de un objeto).</p>
 
                 <p>Finalmente, la propiedad "cara" puede estar o no presente. Su presencia indica que la estructura es final (es decir, es la que vemos). De no estar, el renderer no sabe con qué cara mostrar al objeto, por lo que este tipo de estructuras "sin cara" no pueden ser vistas directamente. Un ejemplo de estructura3D sin cara son los palotes.</p>
-                <pre><code>
-{
+                <pre>
+<code>{
   "tipo":"estructura3D",
   "nombre":"&lt;nombre&gt;",
   "componentes":{
@@ -46,8 +46,8 @@
   "proyecta_sombra":true|false,
 
   "cara":"frente"|"lado"|"reverso"
-}
-                </code></pre>
+}</code>
+                </pre>
             </section>
         </article>
     </body>
