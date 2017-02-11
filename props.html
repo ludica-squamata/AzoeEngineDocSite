@@ -13,26 +13,18 @@
         <article>
         <h1>Formato de Props e Ítems</h1>
             <section>
-                <h2>Escenografía</h2>
-                <p> Se denomina escenografía a los objetos que están presentes en el mapa, como las casas o los árboles. Un objeto escenografía puede ser de los siguientes tipos.</p>
-                <ul>
-                    <li> Agarrable: se pueden tomar del mapa y pasan a ser Ítems en el Inventario.</li>
-                    <li> Movible: es posible hacer que se muevan, empujándolos.</li>
-                    <li> Destruible: WIP</li>
-                    <li> Operable: tienen diversos estados que pueden cambiarse al accionarlos.</li>
-                </ul>
-            </section>
-            <section>
-                <h2>Item</h2>
-                <p> Los objetos agarrables se convierten en Item cuando son tomados del mapa y pasan a formar parte del invetario de un mob. Pueden ser de los siguientes tipos.</p>
-                <ul>
-                    <li>Equipable: por ejemplo, una parte de armadura.</li>
-                    <li>Consumible: por ejmplo, una fruta.</li>
-                </ul>
-            </section>
-            <section>
-                <p>La estructura general para las escenografías es:</p>
-                <pre><code>
+                <dl>
+                    <dt>Escenografía</dt>
+                    <dd>Se denomina escenografía a los objetos que están presentes en el mapa, como las casas o los árboles. Un objeto escenografía puede ser de los siguientes tipos.</dd>
+                </dl>
+                <dl>
+                    <dt>Agarrable</dt>: <dd>se pueden tomar del mapa y pasan a ser Ítems en el Inventario.</dd>
+                    <dt>Operable</dt>: <dd>tienen diversos estados que pueden cambiarse al accionarlos.</dd>
+                    <dt>Movible</dt>: <dd>es posible hacer que se muevan, empujándolos.</dd>
+                </dl>
+                    <p>La estructura general para las escenografías es:</p>
+                <pre>
+                    <code>
 {
   "tipo":"&lt;string&gt;",
   "subtipo":"&lt;string&gt;" (si tiene),
@@ -41,29 +33,45 @@
   "proyecta_sombra":true|false
   "propiedades":[]
 }
-                </code></pre>
+                    </code>
+                </pre>
             </section>
+
             <section>
-                <h3>Consumible</h3>
-                Una escenografía _Agarrable_ puede ser también consumible:
-                <pre><code>
+                <h3>Agarrable</h3>
+                <p> Los objetos agarrables se convierten en <span>Ítem</span> cuando son tomados del
+                    mapa y pasan a formar parte del invetario de un mob. Los ítems pueden ser de los
+                    siguientes tipos.</p>
+                <dl>
+                    <dt>Consumible</dt>: <dd>por ejmplo, una fruta.</dd>
+                    <dt>Equipable</dt>: <dd>por ejemplo, una parte de armadura.</dd>
+                </dl>
+
+                <p>Una escenografía Agarrable puede ser también <span>Consumible</span>:</p>
+                <pre>
+                    <code>
 "subtipo":"consumible",
 "efecto":{
   "des":"&lt;string, descripción&gt;",
   "stat":"&lt;string&gt;",
   "mod":int}
-                </code></pre>
-                O bien Equipable:
-                <pre><code>
+                    </code>
+                </pre>
+                <p>O bien <span>Equipable</span>:</p>
+                <pre>
+                    <code>
 "subtipo":"equipable",
 "efecto":{
     "des":"&lt;string, descripción&gt;",
     "equipo":"&lt;slot>"}
-                </code></pre>
+                    </code>
+                </pre>
             </section>
             <section>
                 <h3>Operable</h3>
-                <p>Un tipo particular de Escenografía es aquella que puede ser operada por un mob, pero que no puede pasar a formar parte del inventario de éste. Por ejemplo, una puerta.</p>
+                <p>Un tipo particular de Escenografía es aquella que puede ser operada por un mob,
+                    pero que no puede pasar a formar parte del inventario de éste.
+                    Por ejemplo, una puerta.</p>
                 <pre><code>
 "operable":[
   {"ID":0,
@@ -79,13 +87,15 @@
                 </code></pre>
             </section>
             <section>
-                <h3>Eventos</h3>
+                <h2>Eventos</h2>
                 <p>Finalmente, un objeto de la escenografía puede tener eventos asociados.</p>
-                <pre><code>
+                <pre>
+                    <code>
 "script":"&lt;string. Nombre del script.py&gt;",
 "eventos":{
     "&lt;nombre del evento>":"&lt;nombre de la función&gt;"
-                </code></pre>
+                    </code>
+                </pre>
             </section>
         </article>
     </body>

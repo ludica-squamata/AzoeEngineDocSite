@@ -18,26 +18,26 @@
                 <dd>Las Hojas (leaves) de los árboles de comportamiento necesitan acceder al
                     contexto de todo el árbol (llamado shared_context). Los métodos expuestos
                     a continuación acceden indirectamente al árbol.</dd>
-                <dl>
-                    <dt>tree.clear_context()</dt>: <dd>borra todo el contenido del context.
-                    Típicamente esto se hace para resetear el arbol.</dd>
+            </dl>
+            <dl>
+                <dt>tree.clear_context()</dt>: <dd>borra todo el contenido del context.
+                Típicamente esto se hace para resetear el arbol.</dd>
 
-                    <dt>tree.get_context(variable)</dt>: <dd>devuelve el valor de la variable
-                    como está en el contexto. Variable debe ser un string, y debe existir en
-                    el contexto.</dd>
+                <dt>tree.get_context(variable)</dt>: <dd>devuelve el valor de la variable
+                como está en el contexto. Variable debe ser un string, y debe existir en
+                el contexto.</dd>
 
-                    <dt>tree.set_context(variable, valor)</dt>: <dd>si la variable no se encuentra
-                    en el contexto, este método la agrega con el valor dado. En caso de ya
-                    existir, el valor de la variable se reemplaza por el valor dado.</dd>
+                <dt>tree.set_context(variable, valor)</dt>: <dd>si la variable no se encuentra
+                en el contexto, este método la agrega con el valor dado. En caso de ya
+                existir, el valor de la variable se reemplaza por el valor dado.</dd>
 
-                    <dt>leaf.get_entity()</dt>: <dd>devuelve la entidad (por ejemplo, el mob)
-                    que está corriendo la AI.</dd>
+                <dt>leaf.get_entity()</dt>: <dd>devuelve la entidad (por ejemplo, el mob)
+                que está corriendo la AI.</dd>
 
-                    <dt>tree.reset()</dt>: <dd>este método restablece todos los valores a sus puntos
-                    iniciales. No debería ser necesaria, por lo que podría ser eliminada en
-                    el futuro. Debe ser llamada en la última hoja de una rama del arbol
-                    (la última acción.)</dd>
-                </dl>
+                <dt>tree.reset()</dt>: <dd>este método restablece todos los valores a sus puntos
+                iniciales. No debería ser necesaria, por lo que podría ser eliminada en
+                el futuro. Debe ser llamada en la última hoja de una rama del arbol
+                (la última acción.)</dd>
             </dl>
         </section>
     </article>

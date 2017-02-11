@@ -13,32 +13,42 @@
         <article>
             <h1>Formato de eventos</h1>
             <section>
-                <p>El Ázoe Engine soporta un sistema interno de eventos que comunican distintas partes de motor de forma asincrónica y en cascada. Lo eventos se disparan importanto la clase EventDispatcher del siguinete modo</p>
+                <p>El Ázoe Engine soporta un sistema interno de eventos que comunican distintas partes
+                    de motor de forma asincrónica y en cascada. Los eventos se disparan importanto la
+                    clase EventDispatcher del siguinete modo</p>
 
-                <pre><code>
+                <pre>
+                    <code>
 from engine.globs.eventDispatcher import EventDispatcher
-                </code></pre>
-            </section>
-            <section>
+                    </code>
+                </pre>
+
                 <p>Luego, cuando el evento sea ejecutado, se realiza un trigger()</p>
 
-                <pre><code>
+                <pre>
+                    <code>
 EventDispatcher.trigger("&lt;nombre del evento&gt;", "&lt;clase de origen&gt;", {&lt;datos del evento&gt;})
-                </code></pre>
-            </section>
-            <section>
-                <p>Para que otros módulos y clases respondan al evento, es neceario que primero se registren, mediante el método register().</p>
+                    </code>
+                </pre>
+                <p>Para que otros módulos y clases respondan al evento, es neceario que primero
+                    se registren, mediante el método register().</p>
+                <pre>
+                    <code>
+EventDispatcher.register(&lt;método o función&gt;, "&lt;evento1&gt;" , "&lt;evento2&gt;", ...)
+                    </code>
+                </pre>
 
-                    <pre><code>EventDispatcher.register(&lt;método o función&gt;, "&lt;evento1&gt;" , "&lt;evento2&gt;", ...)</code></pre>
+                <p>Cuando ya no sea necenario responder a un evento, la clase puede llamar al método
+                    deregister(). Los parámetros de este método son los mismos que se usan en register().</p>
+                <pre>
+                    <code>
+EventDispatcher.deregister(&lt;método o función&gt;, "&lt;evento1&gt;", "&lt;evento2&gt;", ...)
+                    </code>
+                </pre>
+                <p>Nótese que los métodos permiten (de)registrar cada oyente a un numero arbitrario
+                    de eventos.</p>
             </section>
-            <section>
-                <p>Cuando ya no sea necenario responder a un evento, la clase puede llamar al método deregister(). Los parámetros de este método son los mismos que se usan en register().</p>
 
-                    <pre><code>EventDispatcher.deregister(&lt;método o función&gt;, "&lt;evento1&gt;" , "&lt;evento2&gt;", ...)</code></pre>
-            </section>
-            <section>
-                <p>Nótese que los métodos permiten de/registrar cada oyente a un numero arbitrario de eventos.</p>
-            </section>
             <section>
                 <p>Los eventos que actualmente están en el engine son:
                 <dl>

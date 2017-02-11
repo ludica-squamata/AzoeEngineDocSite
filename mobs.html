@@ -45,29 +45,29 @@
             </section>
             <section>
                 <p>Esta es la estructura de un archivo json que define un mob. Estos archivos se almacenan en la carpeta /mobs de la carpeta de datos del proyecto. Todo dato relevante a un mob se define aqui, excepto cuestiones temporales como sus diálogos, objetivos o AI de movimiento.</p>
-                <ul>
-                <li>ID:  Referencia a la base de datos. Aún no tiene función.</li>
-                <li>nombre: El nombre del mob en cuestión. Tiene que ser único.</li>
-                <li>salud, fuerza, carisma: características del mob. En el futuro habrá más.</li>
-                <li>velocidad: cantidad de pixeles por frame a los que se moverá el mob. Para los NPCs es 1.</li>
-                <li>imagenes: cada "filename" es una ruta de arhivo a la imagen en cuestión. Estas rutas son relativas a la carpeta de datos gráficos (data/grafs), por lo que no es necesario indicar la ruta completa.</li>
-                </ul>
-                <ul>
-                  <li>idle: imagen del mob no combativo.</li>
-                  <li>atk: animacion de ataque. Puede ser null.</li>
-                  <li>death: la imagen del cadaver del mob, si existe. Puede ser null.</li>
-                  <li>diag_face: imagen de diálogo del mob. Puede ser null.</li>
-                </ul>
-                <ul>
-                    <li>alphas: Estas rutas se usarán como máscaras de colisión para el mob.</li>
-                    <li>idle: posicion por defecto.</li>
-                    <li>atk animación de ataque. Puede ser `null`.</li>
-                    <li>death: cadáver del mob. Puede ser `null`.</li>
-                </ul>
-                <ul>
-                    <li>clase: el nombre de la clase que se usará para crear el Mob. Ejemplos son "PC", "NPC", etc.</li>
-                    <li><a href="propiedades.html" target="_self">propiedades</a>: Ejemplos son "solido", "pasiva", "hostil" etc.</li>
-                </ul>
+                <dl>
+                    <dt>ID</dt>:  <dd>Referencia a la base de datos. Aún no tiene función.</dd>
+                    <dt>nombre</dt>: <dd>El nombre del mob en cuestión. Tiene que ser único.</dd>
+                    <dt>salud, fuerza, carisma</dt>: <dd>características del mob. En el futuro habrá más.</dd>
+                    <dt>velocidad</dt>: <dd>cantidad de pixeles por frame a los que se moverá el mob. Para los NPCs es 1.</dd>
+                    <dt>imagenes</dt>: <dd>cada "filename" es una ruta de arhivo a la imagen en cuestión. Estas rutas son relativas a la carpeta de datos gráficos (data/grafs), por lo que no es necesario indicar la ruta completa.</dd>
+                </dl>
+                <dl>
+                  <dt>idle</dt>: <dd>imagen del mob no combativo.</dd>
+                  <dt>atk</dt>: <dd>animacion de ataque. Puede ser <code>null</code>.</dd>
+                  <dt>death</dt>: <dd>la imagen del cadaver del mob, si existe. Puede ser <code>null</code>.</dd>
+                  <dt>diag_face</dt>: <dd>imagen de diálogo del mob. Puede ser <code>null</code>.</dd>
+                </dl>
+                <dl>
+                    <dt>alphas</dt>: <dd>Estas rutas se usarán como máscaras de colisión para el mob.</dd>
+                    <dt>idle</dt>: <dd>posicion por defecto.</dd>
+                    <dt>atk</dt>: <dd>animación de ataque. Puede ser <code>null</code>.</dd>
+                    <dt>death</dt>: <dd>cadáver del mob. Puede ser <code>null</code>.</dd>
+                </dl>
+                <dl>
+                    <dt>clase</dt>: <dd>el nombre de la clase que se usará para crear el Mob. Ejemplos son "PC", "NPC", etc.</dd>
+                    <dt><a href="propiedades.html" target="_self">propiedades</a></dt>: <dd>Ejemplos son "solido", "pasiva", "hostil" etc.</dd>
+                </dl>
             </section>
         </article>
     </body>

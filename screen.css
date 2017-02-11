@@ -5,9 +5,9 @@ body {
 
 article {
     width: 75%;
-    margin-left: 240px;
+    margin-left: 23%;
     position:absolute;
-    top: 0px
+    top: 0%
 }
 
 section {
@@ -16,6 +16,10 @@ section {
 
 p {
     padding: 5px;
+}
+
+p span {
+    font-style: italic
 }
 
 li {
@@ -31,10 +35,11 @@ h1, h2, h3 {
 dt {
     display:inline-block;
     font-weight:bold;
+    padding-left: 5px
 }
 
-dd {
-    display:block;
+pre {
+    padding-left: 5px
 }
 
 .links {
