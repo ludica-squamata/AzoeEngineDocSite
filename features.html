@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Notas técnicas</title>
+        <meta name="author" content="Zeniel Danaku & Einacio Spiegel">
+        <meta name="keywords" content="Game,Python,Pygame,Mano's Gifts,Ázoe Engine,RPG,Role playing videogame">
+        <link rel="stylesheet" href="screen.css">
+        <link rel="icon" href="favicon.png">
+    </head>
+    <body>
+    <nav>
+        <iframe class="nav" src="navigation.html">Esta página utliza marcos.</iframe>
+    </nav>
+        <article>
+            <h1>Notas Técnicas</h1>
+            <section>
+                <h2>Diálogos</h2>
+                <ul>
+                    <li>Se estructuran como árboles de diálogo.</li>
+                    <li>El jugador puede elegir exáctamente lo que el personaje va a decir.</li>
+                    <li>Cada diálogo es un archivo separado.</li>
+                    <li>El carisma (o cualquier otro atributo) puede determinar si algunas opciones de diálogo se mostrarán si la puntuación del atributo es mayor al requisito de dicha opción.</li>
+                    <li>Fragmentos de los diálogos pueden resaltarse mediante tags, estilo <code>&lt;tag&gt;palabra&lt;/tag&gt;</code>.</li>
+                    <li>Los bloques de texto grandes pueden ser desplazados hacia arriba y abajo, incluso si son opciones a elegir de un menú circular.</li>
+                    <li>Las puntuaciones de característica del héroe ahora también habilitan a mostrar (o no) partes del diálogo de los NPCs. Lo mismo sucede con los objetos que el héroe tenga encima.</li>
+                    <li>Ciertas opciones dentro del árbol pueden cambiar puntuaciones de un personaje mediante eventos. Mediante esta mecánica, también podrían setear event flags.</li>
+                    <li>Si es el player el que inicia el diálogo, se abre un menú circular que le permite elegir de qué quiere hablar. Si, mediante AI, es el NPC el que inicia el diálogo, este menú no aparece.</li>
+                    <li>El player puede elegir lo que va a decir mediante un menú circular. Esto permite que las opciones de diálogo del héroe sean más extensas que una línea.</li>
+                    <li>Al tocar “acción” sobre un elemento del escenario, se abre una descripción de 1 bloque de texto. Este bloque desaparece al tocar nuevamente acción o cancelar diálogo.</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Reloj Multifuncional</h2>
+                <p>El engine soporta dos clases de Relojes para el mantenimiento del tiempo en el juego. El reloj "ficticio" corre con los ticks del juego, y puede ser comprimido o dilatado con respecto al tiempo del mundo real como se disponga. El reloj Real, por otro lado, está atado al tiempo del sistema y cambia cuando cambia el tiempo del mundo real.</p>
+            </section>
+            <section>
+                <h2>Tags Condicionales</h2>
+                <p>Cualquier Tag puede escribirse con requisitos que se deben cumplir para que ésta se muestre. El engine puede discriminar por los atributos (altos y bajos) de los diversos hablantes ("interlocutores") del diálogo para determinar si la tag en cuestión se muestra o no.</p>
+            </section>
+        </article>
+    </body>
+</html>

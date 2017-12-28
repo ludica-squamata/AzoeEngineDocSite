@@ -13,9 +13,7 @@
         <article>
             <h1>Formato de eventos</h1>
             <section>
-                <p>El Ázoe Engine soporta un sistema interno de eventos que comunican distintas partes
-                    de motor de forma asincrónica y en cascada. Los eventos se disparan importanto la
-                    clase EventDispatcher del siguinete modo</p>
+                <p>El Ázoe Engine soporta un sistema interno de eventos que comunican distintas partes  de motor de forma asincrónica y en cascada. Los eventos se disparan importanto la clase EventDispatcher del siguinete modo</p>
                 <pre>
 <code>from engine.globs.eventDispatcher import EventDispatcher</code>
                 </pre>
@@ -28,46 +26,31 @@
                 <pre>
 <code>EventDispatcher.register(&lt;método o función&gt;, "&lt;evento1&gt;" , "&lt;evento2&gt;", ...)</code>
                 </pre>
-                <p>Cuando ya no sea necenario responder a un evento, la clase puede llamar al método
-                    deregister(). Los parámetros de este método son los mismos que se usan en register().</p>
+                <p>Cuando ya no sea necenario responder a un evento, la clase puede llamar al método deregister(). Los parámetros de este método son los mismos que se usan en register().</p>
                 <pre>
 <code>EventDispatcher.deregister(&lt;método o función&gt;, "&lt;evento1&gt;", "&lt;evento2&gt;", ...)</code>
                 </pre>
-                <p>Nótese que los métodos permiten (de)registrar cada oyente a un numero arbitrario
-                    de eventos.</p>
+                <p>Nótese que los métodos permiten (de)registrar cada oyente a un numero arbitrario de eventos.</p>
             </section>
             <section>
-                <p>Los eventos que actualmente están en el engine son</p>:
-                <dl>
-                    <dt>NuevoJuego</dt>: <dd>se dispara cuando se inicia un juego.</dd>
-                    <dt>CambiarMapa</dt>: <dd>cuando héroe cambia de mapas, este evento le avisa al engine
-                que cambie el mapa.</dd>
-                    <dt>hora</dt>: <dd>cada vez que el reloj llegue a una hora, se dispara este evento.
-                Está vinculado al movimiento solar.</dd>
-                    <dt>MovimientoSolar</dt>: <dd>cambia las sombras de los sprites.</dd>
-                    <dt>DialogEvent</dt>: <dd>cuando un fragmento de diálogo lance un evento, será de este
-                tipo.</dd>
-                    <dt>MobHerido</dt>: <dd>se dispara cuando un mob resulta herido. Actualiza el HUD si
-                el mob es el héroe.</dd>
-                    <dt>MobMuerto</dt>: <dd>se dispara cuando un mob muere. Esto cierra el juego si el mob
-                es el héroe.</dd>
-                    <dt>DelItem</dt>: <dd>cuando el héroe agarra un item del mapa, éste evento se lanza
-                para hacerlo desaparecer del mapa.</dd>
-                    <dt>Pause</dt>: <dd>se activa cuando el juego entra en pausa. detiene el correr del
-                tiempo.</dd>
-                    <dt>key</dt>: <dd>cada vez que el jugador toca una tecla, se dispara este evento. Cada
-                evento tendrá un efecto diferente dependiendo del modo de juego en el que se encuentre el
-                motor, la tecla pulsada, y el modo en el que se haya pulsado (tap, hold o release).</dd>
-                    <dt>OpenMenu</dt>: <dd>cuando Pausa u otro menú llaman a nuevos menúes se dispara
-                este evento para abrirlos.</dd>
-                    <dt>ToggleSetKey</dt>: <dd>cuando el usuario elija una tecla para modificar el input,
-                se dispara este evento para capturar el keydown de una tecla no registrada.</dd>
-                    <dt>Save, SaveData y SaveDataFile</dt>: <dd>estos tres eventos se disparan en cascada.
-                El primero avisa a todas las clases oyentes que se va a guardar el estado del juego. Cada
-                clase, a su vez, lanza SaveData con los datos que se quieren guardar (posicion del
-                personaje, hora, etc). Finalmente, SaveFileData le indica al engine que tiene que guardar
-                la data en el archivo de salvado.</dd>
-                </dl>
+                <p>Los eventos que actualmente están en el engine son:</p>
+            <dl>
+                <dt>DayFlag, HourFlag, MinuteFlag, SecondFlag</dt>:<dd>Cada vez que el reloj del juego llegue a un momento determinado del día, se dispara este evento. DayFlag se dipara al cambiar de día (a las 0:00hs). HourFlag se dipara en cada hora (1:00, 2:00, etc.). MinuteFlag y SecondFlag se disparan cada minuto y segundo respectivamente. Estos eventos están vinculado al movimiento solar y por lo tanto a las sombras dinámicas.</dd>
+                <dt>DeleteItem</dt>:<dd>Cuando el héroe toma un <a href="props.html">Prop Agarrable</a> del mapa, éste evento se lanza para hacerlo desaparecer del mapa.</dd>
+                <dt>DialogEvent</dt>:<dd>Cuando un fragmento de diálogo lance un evento, será de este tipo.</dd>
+                <dt>InitSystem</dt>:<dd>Este es el nombre dado al evento que dispara el Script del juego. Solo se dispara 1 vez al inicio del script main.py</dd>
+                <dt>Key</dt>:<dd>Cada vez que el jugador toca una tecla, se dispara este evento. Este evento tendrá un efecto diferente dependiendo de la tecla pulsada, el modo de juego en el que se encuentre el motor (Aventura, Diálogo o Menú), y la forma en la que se haya pulsado dicha tecla (un tap, hold o release).</dd>
+                <dt>MobDeath</dt>:<dd>Se dispara cuando un mob muere. Esto cierra el juego si el mob es el héroe.</dd>
+                <dt>MobWounded</dt>:<dd>Se dispara cuando un mob resulta herido. Actualiza el HUD si el mob en cuestión es el foco del HUD.</dd>
+                <dt>NewGame</dt>:<dd>Se dipara al iniciarse un juego, sea que este es nuevo o se inicie desde un SaveFile. </dd>
+                <dt>OpenMenu</dt>:<dd>Cuando Pausa u otro menú llaman a nuevos menúes, se dispara este evento para abrirlos.</dd>
+                <dt>Rotate, RotateEverything, RotateMobs</dt>:<dd>Estos eventos están vinculados a un Feature en construcción y por lo tanto no se están usando.</dd>
+                <dt>Save, SaveData, SaveDataFile</dt>:<dd>Estos tres eventos se disparan en cascada. El primero avisa a todas las clases oyentes que se va a guardar el estado del juego. Cada oyente, a su vez, lanza SaveData con los datos que se quieren guardar (posicion del personaje, hora, etc). Finalmente, SaveFileData le indica al engine que tiene que guardar la data en el archivo de salvado.</dd>
+                <dt>SetMap</dt>:<dd>Cuando el foco de la cámara cambia de mapas, este evento le avisa al engine que cambie el mapa.</dd>
+                <dt>SolarMovement</dt>:<dd>Este evento, vinculado a los eventos del reloj, cambia las sombras de los sprites. Dado que las Sombras Dinámicas son un Feature en construcción, este evento no tiene uso.</dd>
+                <dt>TogglePause</dt>:<dd>Se activa cuando el juego entra o sale del modo 'pausa'. En pausa el tiempo de juego se detiene.</dd>
+                <dt>ToggleSetKey</dt>:<dd>Cuando el usuario elija una tecla para modificar el input, se dispara este evento para capturar el keydown de una tecla no registrada.</dd>
+            </dl>
             </section>
         </article>
     </body>
