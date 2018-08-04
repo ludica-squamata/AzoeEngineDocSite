@@ -58,18 +58,19 @@ nav iframe  {
     height:800px;
 }
 
-#links {
-    list-style-type: none;
+div {
     margin: 0;
     padding: 0;
     background-color: #3388aa;
 }
 
-.block {
+div a {
     display: block;
     padding: 8px 16px;
+    text-decoration: none;
+    color:black;
 }
 
-.block:hover {
+div a:hover {
     background-color: #cccc44;
 }
