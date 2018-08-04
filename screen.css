@@ -51,9 +51,12 @@ embed {
   width: 600px;
 }
 
+nav {
+    position: fixed;
+}
+
 nav iframe  {
     border:none;
-    margin-top:4px;
     width:208px;
     height:800px;
 }
