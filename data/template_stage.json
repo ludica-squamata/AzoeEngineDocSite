@@ -1,0 +1,20 @@
+{
+    "entradas": {
+      "<nombre>": {
+        "chunk":"<nombre del chunk>",
+        "pos": [<x>,<y>]
+      }
+    },
+    "salidas":[{
+      "stage":"<nombre del stage>",
+      "nombre":"<nombre de esta salida>",
+      "rect":[<x>,<y>,<w>,<h>],
+      "chunk":"<nombre del chunk>",
+      "entrada":"<nombre de la entrada>",
+      "direcciones":["arriba"|"abajo"|"izquierda"|"derecha"]}
+    ],
+    "ambiente":"interior"|"exterior",
+    "amanece":[<h>,<m>],
+    "atardece":[<h>,<m>],
+    "anochece":[<h>,<m>]
+}

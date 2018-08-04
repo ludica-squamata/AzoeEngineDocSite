@@ -1,0 +1,7 @@
+{
+  "tipo":"movible",
+  "peso":<int>|"volumen":<int>,
+  "image": "<filename> (*.png"),
+  "proyecta_sombra":true|false
+  "propiedades":["<propiedad>",...]
+}

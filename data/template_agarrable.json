@@ -1,0 +1,20 @@
+{
+  "tipo":"agarrable"
+  "subtipo":"consumible"|"equipable"
+  "peso":<int>|"volumen":<int>,
+  "image": "<filename> (*.png"),
+  "proyecta_sombra":true|false
+  "propiedades":["<propiedad>",...],
+  "efecto":{
+    "des":"<Descripción del efecto>",
+    
+    "stat":"<nombre de la estadística>",
+    "mod":<int|valor del efecto>
+    
+    "equipo":"yelmo"|"aro 1"|"aro 2"|"cuello"|
+             "peto"|"guardabrazos"|"brazales"|
+             "faldar"|"quijotes","grebas"|"mano buena"|
+             "mano mala"|"botas"|"capa","cinto"|
+             "guantes"|"anillo 1"|"anillo 2"
+  }
+}

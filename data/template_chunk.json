@@ -1,0 +1,19 @@
+﻿{
+  "fondo":"<filename> (*.png")",
+  "colisiones":"<filename> (*.png"),
+  "props": {
+    "<nombre de la referencia>":[[<x>,<y>,<z>],...],...
+  },
+  "mobs": {
+    "<nombre de la referencia>":[[<x>,<y>,<z>],...],...
+  },
+  "limites":{
+    "izq":"nombre de un mapa (*.json)>"|null,
+    "der":"nombre de un mapa (*.json)>"|null,
+    "inf":"nombre de un mapa (*.json)>"|null,
+    "sup":"nombre de un mapa (*.json)>"|null
+  },
+  "refs":{
+    "<nombre de la referencia>":"ruta a la referencia (*.json)"
+  }
+}

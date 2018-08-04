@@ -1,0 +1,25 @@
+{
+    "ID": <número de orden>,
+    "nombre": "<nombre del mob>",
+
+  "atributos":{
+    "accion_fisica":<valor>,
+    "accion_especial":<valor>,
+    "defensa_fisica":<valor>,
+    "defensa_especial":<valor>,
+    "accion_social":<valor>,
+    "defensa_social":<valor>,
+    "velocidad":<valor>,
+    "salud":<valor>,
+    "mana":<valor>
+    
+    "imagenes":{
+        "idle": "<filename (*.png)>",
+        "atk": "<filename (*.png)>"| null,
+        "death": "<filename (*.png)>"| null,
+        "diag_face": "<filename (*.png)>"| null
+    },
+
+    "alpha":"<filename (*.png)>",
+    "AI":"controllable"|"<AI name>"
+}

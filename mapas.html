@@ -6,7 +6,7 @@
         <meta name="author" content="Zeniel Danaku & Einacio Spiegel">
         <meta name="keywords" content="Game,Python,Pygame,Mano's Gifts,Ázoe Engine,RPG,Role playing videogame">
         <link rel="stylesheet" href="screen.css">
-        <link rel="icon" href="favicon.png">
+        <link rel="icon" href="data/favicon.png">
     </head>
     <body>
         <nav><iframe class="nav" src="navigation.html">Esta página utliza marcos.</iframe></nav>
@@ -14,50 +14,11 @@
             <h1>Formato de mapas</h1>
             <section>
                 <h2>Stage</h2>
-                <pre>
-{
-    "entradas": {
-      "&lt;nombre&gt;": {
-        "chunk":"&lt;nombre del chunk&gt;",
-        "pos": [&lt;x&gt;,&lt;y&gt;]
-      }
-    },
-    "salidas":[{
-      "stage":"&lt;nombre del stage&gt;;",
-      "nombre":"&lt;nombre de esta salida&gt;",
-      "rect":[&lt;x&gt;,&lt;y&gt;,&lt;w&gt;,&lt;h&gt;],
-      "chunk":"&lt;nombre del chunk&gt;",
-      "entrada":"&lt;nombre de la entrada&gt;",
-      "direcciones":["arriba"|"abajo"|"izquierda"|"derecha"]}
-    ],
-    "ambiente":"interior"|"exterior",
-    "amanece":[&lt;h&gt;,&lt;m&gt;],
-    "atardece":[&lt;h&gt;,&lt;m&gt;],
-    "anochece":[&lt;h&gt;,&lt;m&gt;]
-}
-                </pre>
+                <iframe class="showdata" src="data/template_stage.json" height="350"></iframe>
             </section>
             <section>
                 <h2>Chunk</h2>
-                <pre>
-{
-  "fondo":"maps/fondos/&lt;filename&gt;.png",
-  "colisiones":"maps/colisiones/&lt;filename&gt;.png",
-  "props": {
-    &lt;nombre de la referencia&gt;:[[&lt;x&gt;,&lt;y&gt;,&lt;z&gt;],...],...
-  },
-  "mobs": {
-    &lt;nombre de la referencia&gt;:[[&lt;x&gt;,&lt;y&gt;,&lt;z&gt;],...],...
-  },
-  "limites":{
-    "izq":"nombre de un mapa&gt;"|null,
-    "der":"nombre de un mapa&gt;"|null,
-    "inf":"nombre de un mapa&gt;"|null,
-    "sup":"nombre de un mapa&gt;"|null
-  },
-  "refs":{}
-}
-                </pre>
+                <iframe class="showdata" src="data/template_chunk.json" height="350"></iframe>
             </section>
         </article>
     </body>

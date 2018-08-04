@@ -1,0 +1,16 @@
+{
+  "tipo":"operable",
+  "peso":<valor>, "volumen":<valor>,
+  "image":"<filename> (*.png)",
+  "propiedades":[],
+  "proyecta_sombra":true|false,
+  "operable":[
+    {"ID":<número del estado>,
+     "image":"<imagen del estado> (*.png)",
+     "next":<id del siguiente estado>
+     "atributo":"<valor>"
+    },
+    ...
+  ],
+  "script": "<filename> (*.py)"
+}

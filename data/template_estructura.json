@@ -1,0 +1,30 @@
+{
+  "tipo":"estructura3D",
+  "nombre":"<nombre>",
+  "componentes":{
+    "front":{
+      "<componente>":[[<x>,<y>,<z>]],
+      ...
+    },
+    "left":{
+        "<componente>":[[<x>,<y>,<z>]],
+        ...
+    },
+    "right":{
+        "<componente>":[[<x>,<y>,<z>]],
+        ...
+    },
+    "back":{
+        "<componente>":[[<x>,<y>,<z>]],
+        ...
+    }
+  },
+  "referencias":{
+    "<componente1>":"<ruta a un archivo (*.png)>",
+    "<componente2>":"<ruta a la defición de un objeto (*.json)>",
+    "<componente3>":"<definición embebida de un objeto>",
+    }
+  },
+  "proyecta_sombra":true|false,
+  "cara":"front"|"left"|"right"|"back"
+}

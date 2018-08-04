@@ -6,7 +6,7 @@
         <meta name="author" content="Zeniel Danaku & Einacio Spiegel">
         <meta name="keywords" content="Game,Python,Pygame,Mano's Gifts,Ázoe Engine,RPG,Role playing videogame">
         <link rel="stylesheet" href="screen.css">
-        <link rel="icon" href=favicon.png>
+        <link rel="icon" href="data/favicon.png">
 
     </head>
     <body>
@@ -19,35 +19,7 @@
                 <p>Cada componente listado debe estar dentro de las "referencias". Aquí se indican, mediante strings, rutas a achivos de imagen png (para componentes que son solo eso, una imagen sin interacción); rutas a la definición de un objeto (que puede ser una estructura 3D como ésta o algún tipo de Prop, por ejemplo un <a href="props.html">Operable</a>) o una <em>definición embebida</em> de un objeto (que sería lo mismo que encontraríamos en el archivo json de la definición de un objeto).</p>
 
                 <p>Finalmente, la propiedad "cara" puede estar o no presente. Su presencia indica que la estructura es final (es decir, es la que vemos). De no estar, el renderer no sabe con qué cara mostrar al objeto, por lo que este tipo de estructuras "sin cara" no pueden ser vistas directamente. Un ejemplo de estructura3D sin cara son los palotes.</p>
-                <pre>
-<code>{
-  "tipo":"estructura3D",
-  "nombre":"&lt;nombre&gt;",
-  "componentes":{
-    "frente":{
-      "&lt;componente&gt;":[[&lt;x&gt;,&lt;y&gt;,&lt;z&gt;]],
-      ...
-    },
-    "lado":{
-        "&lt;componente&gt;":[[&lt;x&gt;,&lt;y&gt;,&lt;z&gt;]],
-        ...
-    },
-    "reverso":{
-        "&lt;componente&gt;":[[&lt;x&gt;,&lt;y&gt;,&lt;z&gt;]],
-        ...
-    }
-  },
-  "referencias":{
-    "&lt;componente1&gt;":"&lt;ruta a un archivo png&gt;",
-    "&lt;componente2&gt;":"&lt;ruta a la defición de un objeto&gt;",
-    "&lt;componente3&gt;":"&lt;definición embebida de un objeto&gt;",
-    }
-  },
-  "proyecta_sombra":true|false,
-
-  "cara":"frente"|"lado"|"reverso"
-}</code>
-                </pre>
+                <iframe  class="showdata" src="data/template_estructura.json" height="480"></iframe>
             </section>
         </article>
     </body>

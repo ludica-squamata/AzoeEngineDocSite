@@ -50,7 +50,7 @@ pre {
 }
 
 .block {
-    display: block;    
+    display: block;
     padding: 8px 16px;
 }
 
@@ -68,4 +68,9 @@ pre {
     margin-top:4px;
     width:208px;
     height:800px;
+}
+
+.showdata {
+   border:none;
+   width:600px;
 }

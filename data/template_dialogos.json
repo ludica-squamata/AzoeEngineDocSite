@@ -1,0 +1,39 @@
+{
+  "head":{
+    "class":"chosen"|"scripted",
+    "conditional_tags":[
+      "<id>":{
+        "<tag>":{<requisitos>},
+        ...
+        }
+      }
+    ],
+    "style":"<filename (*.json)"",
+    "locutors":["<locutor>", "<locutor>", ...],
+    "name":"<nombre del diálogo>",
+    "about":"<tema del diálogo>",
+    "icon":"<filename (*.png)>|"null,
+    "keywords":[],
+    "events":{
+      "<event name>":{<event data>}
+    }
+  },
+  "body":{
+    "<id>":{"type":"node","leads":<número de id>,"from":"<locutor>","to":"<locutor>",
+    "txt":"<speech paragraph. May contain tags>"},
+
+    "<id>":{"type":"node","leads":[<id>,<id>,<id>...],"from":"<locutor>","to":"<locutor>",
+    "txt":"<speech paragraph. May contain tags>"},
+
+    "<id>":{"type":"branch","leads":<id>,"from":"<locutor>","to":"<locutor>",
+    "txt":"<speech paragraph. May contain tags>"},
+
+    "<id>":{"type":"leaf","from":"<locutor>","to":"<locutor>",
+    "txt":"<speech paragraph. May contain tags>"},
+
+    "<id>":{"type":"exclusive","leads":[<id>,<id>],"from":"<locutor>","to":"<locutor>",
+    "txt":"<speech paragraph. May contain tags>"},
+
+    ...
+  }
+}
