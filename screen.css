@@ -26,6 +26,11 @@ li {
     padding: 5px;
 }
 
+li a {
+    text-decoration: none;
+    color: black;
+}
+
 h1, h2, h3 {
     background-color: #ffff00;
     color: black;
@@ -46,7 +51,14 @@ embed {
   width: 600px;
 }
 
-.links {
+nav iframe  {
+    border:none;
+    margin-top:4px;
+    width:208px;
+    height:800px;
+}
+
+#links {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -60,21 +72,4 @@ embed {
 
 .block:hover {
     background-color: #cccc44;
-}
-
-.b {
-    text-decoration: none;
-    color: black;
-}
-
-.nav {
-    border:none;
-    margin-top:4px;
-    width:208px;
-    height:800px;
-}
-
-.showdata {
-   border:none;
-   width:600px;
 }
